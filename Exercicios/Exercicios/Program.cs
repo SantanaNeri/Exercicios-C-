@@ -7,16 +7,18 @@ namespace Exercicios
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Digite o valor raio do circulo:");
-            double raio = double.Parse(Console.ReadLine());
-            Console.WriteLine("Digite o valor de Pi");
-            double valor = double.Parse(Console.ReadLine());
-            
-            double total;
+            Console.WriteLine("Digite o valor de A: ");
+            int A = int.Parse(Console.ReadLine());
+            Console.WriteLine("Digite o valor de B: ");
+            int B = int.Parse(Console.ReadLine());
+            Console.WriteLine("Digite o valor de C: ");
+            int C = int.Parse(Console.ReadLine());
+            Console.WriteLine("Digite o valor de D: ");
+            int D = int.Parse(Console.ReadLine());
 
-            total = valor * (raio * raio);
+            double diferenca = (A * B - C * D);
 
-            Console.WriteLine("O valor da área é de " + total.ToString("F4", CultureInfo.InvariantCulture));
+            Console.WriteLine("A difrença entre os valores é "+diferenca.ToString("F2", CultureInfo.InvariantCulture));
         }
     }
 }
