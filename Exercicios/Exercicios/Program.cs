@@ -7,18 +7,17 @@ namespace Exercicios
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Digite o valor de A: ");
-            int A = int.Parse(Console.ReadLine());
-            Console.WriteLine("Digite o valor de B: ");
-            int B = int.Parse(Console.ReadLine());
-            Console.WriteLine("Digite o valor de C: ");
-            int C = int.Parse(Console.ReadLine());
-            Console.WriteLine("Digite o valor de D: ");
-            int D = int.Parse(Console.ReadLine());
+            Console.WriteLine("Digite a senha");
+            int senha = int.Parse(Console.ReadLine());
 
-            double diferenca = (A * B - C * D);
+            while(senha != 2002)
+            {
+                Console.WriteLine("Senha Invalida");
+                Console.WriteLine("Senha errada, digite novamente a senha: ");
+                senha = int.Parse(Console.ReadLine());
+            }
 
-            Console.WriteLine("A difrença entre os valores é "+diferenca.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Acesso permitido");
         }
     }
 }
