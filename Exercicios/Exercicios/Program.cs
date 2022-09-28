@@ -1,23 +1,23 @@
-﻿using System;
+﻿using Exercicios;
+using System;
 using System.Globalization;
-
-namespace Exercicios
+namespace Course
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Digite a senha");
-            int senha = int.Parse(Console.ReadLine());
+            Retangulo ret = new Retangulo();
 
-            while(senha != 2002)
-            {
-                Console.WriteLine("Senha Invalida");
-                Console.WriteLine("Senha errada, digite novamente a senha: ");
-                senha = int.Parse(Console.ReadLine());
-            }
+            Console.WriteLine("Entre com a largura do retangulo: ");
+            ret.Largura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine("Entre com a altura do retangulo: ");
+            ret.Altura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            Console.WriteLine("Acesso permitido");
+            Console.WriteLine("Area = "+ret.Area().ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Perimetro = "+ret.Perimetro().ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Diagonal = "+ret.Diagonal().ToString("F2", CultureInfo.InvariantCulture));
+
         }
     }
 }
